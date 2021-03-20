@@ -1,0 +1,292 @@
+1. p>b (child selector)
+yaha sirf p ki child ka color change huga or yaha child bold ka tag hy,
+baqi kahi bhi bold ka tag ka color change nhi huga sirf p ki child bold ka huga
+or child access css ke liye is tarha write huga code( p>b ) yaha b jo hy wo p ki child hy
+example:           
+ <p>malik <b>muhammad</b> jahangir</p>
+             p>b{
+                 color : red;
+             }
+__________________________________________________________________________________
+2. p b  (decendant selector)
+yaha b direct child nhi magr phir bhi wo access huga css me Q ke 
+hum ne direct kardiya > ko hata diya
+ <p>malik <i><b>muhammad</b></i> jahangir</p>
+             pb{
+                 color : red;
+             }
+_____________________________________________________________________________________
+3. p+b (adjacent direct sibling)
+  yaha jo jo p ke under bold hein us ka color css se change huga. ya kuch bhi style huga
+sare sibling bold pe apply hu jayega. agr p me 4 bold hein tu charo ka color red huga 
+             p+b{
+                 color : red;
+             }
+4. p~b (general sibling) direct sibling na bhi hu tab bhi css se access huga
+______________________________________________________________________________
+5.Opasity (to used transparensity) 
+h1{
+          color : red;
+          opasity: 0.2      // range (0, 0.1, 0.2------1)
+  }
+_____________________________________________________________________________
+6.HSL (Hue saturation lightness)  // ziada use nhi huta 
+h1{
+         background-color: hsl(0 //color, 2% //saturation,30% //lightness) dont need to use opasity here
+                                     
+  }
+__________________________________________________________________________
+6.rgba (red green blue alfa(mean transparent similar to opasity))   
+h1{
+         background-color: rgba(12, 2, 30, 0.2) dont need to use opasity here
+                                     
+  }
+___________________________________________________________________________________
+donload dont family from google font.com // with ttf extenstion only
+download ke bad define hufa is tarha css style sheet me 
+@font-face{  //directory structure kehlata hy font ko define karna
+
+          font-family: 'Arial1'; //arial1 google name hy font ka jo google ne diya tha
+          src: url('Arial1 Normal.ttf')
+
+} 
+
+
+phir is tarha use huga har jaga
+*{ 
+font family: Arial 1;         //arial1 wo font hy jo goolgle se liya hy
+}
+________________________________________________________________________________
+*{
+text transform: uppercase
+}
+_______________________________________________________________________
+*{
+text transform: capitalize  //har lafz ka pehla capital hujaye ga
+}
+_______________________________________________________________________________
+*{
+text decoration: uderline or none or overline or blink or line through
+}
+__________________________________________________________________
+*{
+word spacing: 2em;
+}
+__________________________________________________________________
+*{
+letter spacing: 2em;
+}
+__________________________________________________________________
+*{
+text align: right or left or center or justify // para k liye justify
+}
+__________________________________________________________
+*{
+vertical-align: text-bottom  or baseline or text-top // sirf jo text image ke sath huga us ke liye
+}
+__________________________________________________________
+*{
+      text-indent:  2px  or 2em or 2% // para ya headin ko indent dega thora agy kardega original position se 
+}
+____________________________________________________________________________________
+h1{
+        color: red;
+        text-shadow: 1px 1px 2px blue        //px negative bhi hu sakti hy shaddow ke liye
+}
+_______________________________________________________________________________________________________
+agr kisi bhi para ya heading ke kisi ek letter ya word style dena hy ya size change karna hy tu is tarha access hugaa
+p:first-letter{            //similar first line or word
+          size: 100px;
+          color : #005114;
+} 
+____________________________________________________________________________________________
+by default jo anchor me hum link dete hein wo koi color or under line huta hy by defualt 
+agr us link ye keyword ka color change karna hu tu is tarha access huga
+ 
+ //.format class define ki thi warna direct a bhi likh sakte hein
+a.format:link{
+    color: deeppink;
+       text-decoration: none;
+}
+a.format:visited{               //agr link visit hu gaya hy tu wo black rahe ga
+       color: black; 
+       text-decoration: none;
+}
+_________________________________________________________________________________
+#navbar ul li a:hover{        //jesy hi mouse text ya button pe jayega jaha hover laga hy
+                                us ka color or text change hu jaye ga
+    color: black;                ziada tar buttun or nav bar me use huta hy.
+   background-color: white;
+ 
+ }
+______________________________________________________________________________________
+#navbar ul li a:focus{        //jesy hi mouse text ya button pe click karega focus laga hy
+                                us ka color or text change hu jaye ga
+    color: black;                ziada tar buttun or nav bar me use huta hy.
+   background-color: white;
+ 
+ }
+______________________________________________________________________________________
+#navbar ul li a:active{        //jesy hi mouse text ya button pe click rhe ga active
+                                us ka color or text change hu jaye ga, jab click hat jayega original hujayega sub
+    color: black;                ziada tar buttun or nav bar me use huta hy.
+   background-color: white;
+ 
+ }
+___________________________________________________________________________________________
+______________________________________________________________________________________
+__________________________________________________________________________________
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    <BOXEs>
+html code
+      <div class="main">
+        <img class = "car" src="car4.jpg" alt="car"> 
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea fugiat autem
+              dolore beatae. Sunt doloremque totam quaerat quisquam impedit enim quam 
+              suscipit iste, facere, quia magnam maxime amet facilis tempora!
+         </p>
+
+
+      </div>
+
+
+
+css code
+.car{
+          width: 100%;
+}
+.main{
+    border: 2px solid rebeccapurple;  //   border me sub se pehly width hy phir style  phir color           
+    max-width: 500px;                                 similar use         // max-width: 500px;
+    min-width: 300px;                                 similar use        // min-height: 300px;
+    overflow: sroll                        //agr para ziada huga tu div se bahar nhi jayega balke sroll katsakte h
+    margin: 5px;  // for body
+   padding: 5px;  //for div
+} 
+            top    right   bottom   left
+  margin: 10px     40px     10px     50px;  
+  margin: 10px    auto     10px     auto; or 0 auto  //center hu hajega div
+_++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ navbar hum list se banate hein 
+    or list ko line me print kara ne ke liye hum
+      *{
+               disply : inline or block   //nav
+              display: inline-block;  //div box 
+  }
+          display: none; jis ko acess kare ga us ko delete kardega
+          visibility : hide or visible         / ye sirf hide karega delete nhi karega ;
+ ____________________________________________________________________________________________
+box-shadow: 5px 5px 5px violet;  //similar to text shadow
+ //more box shadow search like inside shahdow etc
+border-radius: 10px or 10px 20px 10px 40px ;  // box ke radius ko round kardega
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                  <List style>
+list-style-type: square or circle or dics or none;   //convert ol into ul
+
+list-style-type: decimal or lower alpha or lower roman;   //convert ul into ol
+
+list-style-image: url('');   //low use
+
+list-style-position: inside;   //list me jo  * ya number hute hy un ko inside ya outside ke liye                             
+ O/p:   * dsfisdv dsjvkdskdvksdbvksv skvksv d svsviksdkvsk   // yaha para ke under * chala gaya inside se
+       osdfhsdiknsnvsnnnvnvnsksndvnsdlnsld dslnsdllksnsnll
+       dfkpsdpdmscv sdifsdcvsd oisdk skd  o     sddcdfddff 
+
+
+short technique:
+
+list-style-type: inside square width 10px ;
+________________________________________________________________________________________________
+Table 
+tr.even{
+       background-color: red;
+//yaaha even no. row ka color red hu jayega
+
+}
+Table{
+
+   border-collapsed:collapsed; //ye property tamam table apas me default gap khatam kardengy
+}
+Table{
+
+   border-space:5px 10px; //5px cells ke between gap huga jab ke 10px rows me gap huga 
+   empty-cell:hide or show;  agr koi cell table me empty huga hu hide hu jayega 
+
+}
+_+++++++++++++++++========================+++++++++++++++++++++++++=====++++++++++++++++++++++++
+
+FORM
+.sign ul li input:focus{                //focus se jasy hi click karengy design change hu jayega
+    border-color: yellow;
+    /* border-radius: 10px; */
+    /* border: 1px solid yellow; */
+
+} 
+button{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+ font-size: 1em;
+    padding: 5px;
+  cursor: pointer      //button pe atee hi cursor change hujayeega
+}
+----------------------------------------------------------------------------------------------
+input.email{          //input me image icon ke liye
+    background-image: url("10750774.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 30px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
++++++++++++++++++++++++++++++++++++++======================+++++++++++++++++++++++++++++++++++
+                      Layout!
+
+img{
+   posotion: obsolute;     //postion ke sath humesha right left top bottom use hute hein 
+   right:100px;             //absolute me hum apni image ya div ko pore page per kahi bhi leja sakte hein
+   top:100px;
+   bottom:100px;
+   left:100px;
+ } 
+
+img{
+   posotion: relative;     //relative apne se pehly waly div ke hisab se posiution le ga pore web per nhi chale ga.... 
+   right:100px;             //absolute me hum apni image ya div ko pore page per kahi bhi leja sakte hein
+   top:100px;
+   bottom:100px;
+   left:100px;
+ } 
+
+img{
+   posotion: fixed;     // kuch nav bar humesha dikhte hein scroll karne ke bad bhi q ke wo fixe hute hein
+   right:100px;         //ya up arrow button ke liye use huta hy
+   top:100px;
+   bottom:100px;
+   left:100px;
+ }
+
+_____________________________________________________________________________________
+* z-index
+sirf do value huti hy 1 or -1 
+agr do div ek dosre ke oper ajaye or pehla wala chup jae 
+to us ko dekhne ke liye -1 or wapis chupany ke liye 1.
+
+* float left
+agr pehly div ke bad jaga bachegi to dori div us ke barabar me kardega
+magr float left dono div me likheingt
+
+agr hum do float left ke bad div ke nichy kuch text likhte hein like para me
+<p>sldosdv deljfd vln ong vn sljdn dsd </p> 
+to responsive view me wo kharav hu jaye ga
+us ko solve kar ne k liye hum ye karengy para ke sath
+p{
+   clear : both;   
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@import("style2.css") // connect different sheet   

@@ -1,0 +1,42 @@
+Media Query !
+ body{
+     back-ground: red;
+}
+
+@media only screen and (max-width: 600){
+  
+  body{
+        back-ground: black;  // agr screen size 600px se kum huga tu color black 
+                                hu jayega warna red hi rhe ga    
+     }
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+  
+FleX BoX!
+{
+  disply:flex; //sare inline hunjaye gy
+  flex-direction:row or colom etc;
+  justify-content:space-arounr(har taraf se equal space); or space between(agr sides me not equal chahiye)
+   flex-wrap: wrap; //isse responsive u jayegi
+  justify content horizaontal dekhta hy jab ke align vertical dekhta hy
+  allign-item :flex end;
+
+}
+yaha two wala bara hujaye ga baqi side waly chote
+ONE{
+   flex:1;
+}
+TWO{
+   flex:3;
+}
+THREE{
+  flex : 1;
+}
+
+Website To Practise Flex: Flex Froggy
+
+
+
+
